@@ -390,12 +390,10 @@ function stageDurations(rows: OrderRow[], products: string[]): StageDuration[] {
           (event) => endTypes.includes(event.type) && event.timestamp >= start,
         );
         if (end)
-          samples
-            .get(stage.id)!
-            .push({
-              product: row.product,
-              days: (end.timestamp - start) / DAY,
-            });
+          samples.get(stage.id)!.push({
+            product: row.product,
+            days: (end.timestamp - start) / DAY,
+          });
       }
     }
   }

@@ -687,6 +687,10 @@ function ImportDialog({
   const ref = useRef<HTMLDialogElement>(null);
   const [error, setError] = useState('');
   const [busy, setBusy] = useState(false);
+  const [filesReady, setFilesReady] = useState({
+    orders: false,
+    events: false,
+  });
   useEffect(() => {
     if (open && !ref.current?.open) {
       setError('');
@@ -735,8 +739,8 @@ function ImportDialog({
     >
       <div className="dialog-head">
         <div>
-          <h2 id="import-title">Load a new snapshot</h2>
-          <p>Replace both CSVs together. Your files stay in this browser.</p>
+          <h2 id="import-title">Import data</h2>
+          <p>Choose both CSVs. Your files stay on this device.</p>
         </div>
         <button
           className="icon-button"
@@ -750,32 +754,39 @@ function ImportDialog({
         <form className="import-form" onSubmit={submit}>
           <label className="field">
             <span>Orders CSV</span>
-            <input type="file" name="orders" accept=".csv,text/csv" required />
-            <small>
-              order_id, created_at, customer_id, product, country, status,
-              is_test
-            </small>
+            <input
+              type="file"
+              name="orders"
+              accept=".csv,text/csv"
+              required
+              onChange={(event) =>
+                setFilesReady((current) => ({
+                  ...current,
+                  orders: !!event.target.files?.length,
+                }))
+              }
+            />
           </label>
           <label className="field">
             <span>Kit events CSV</span>
-            <input type="file" name="events" accept=".csv,text/csv" required />
-            <small>
-              event_id, order_id, kit_id, event_type, occurred_at, source
-            </small>
+            <input
+              type="file"
+              name="events"
+              accept=".csv,text/csv"
+              required
+              onChange={(event) =>
+                setFilesReady((current) => ({
+                  ...current,
+                  events: !!event.target.files?.length,
+                }))
+              }
+            />
           </label>
           <label className="field">
-            <span>Snapshot date · 00:00 UTC</span>
+            <span>Export date</span>
             <input type="date" name="snapshot" defaultValue={asOf} required />
-            <small>
-              Choose the date the export represents. Events after this point are
-              hidden.
-            </small>
+            <small>View the pipeline at midnight UTC on this date.</small>
           </label>
-          <p className="import-note">
-            Same columns, any row order. Duplicate events and orphan rows are
-            handled automatically. The import replaces the current data only
-            after both files validate.
-          </p>
           {error && (
             <div className="error" role="alert">
               {error}
@@ -792,19 +803,21 @@ function ImportDialog({
               }}
             >
               <RotateCcw size={13} />
-              Sample data
+              Restore sample
             </button>
             <button
               type="submit"
               className="primary"
-              disabled={busy || loading}
+              disabled={
+                busy || loading || !filesReady.orders || !filesReady.events
+              }
             >
               {busy ? (
                 <LoaderCircle size={14} className="spin" />
               ) : (
                 <Upload size={14} />
               )}
-              {busy ? 'Reading files…' : 'Load snapshot'}
+              {busy ? 'Reading files…' : 'Import CSVs'}
             </button>
           </div>
         </form>
@@ -814,6 +827,9 @@ function ImportDialog({
 }
 
 export default function App() {
+  const [effects, setEffects] = useState(
+    () => !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+  );
   const [dataset, setDataset] = useState<Dataset | null>(null);
   const [filters, setFilters] = useState<Filters>({ asOf: DEFAULT_AS_OF });
   const [loading, setLoading] = useState(true);
@@ -867,7 +883,7 @@ export default function App() {
     setError('');
   };
   return (
-    <>
+    <div className={`app-shell ${effects ? 'effects-on' : ''}`}>
       <header className="app-header">
         <div className="brand">
           <span className="brand-symbol">
@@ -878,6 +894,13 @@ export default function App() {
           <span className="workspace-name">Operations workspace</span>
         </div>
         <div className="header-right">
+          <button
+            className="motion-toggle"
+            aria-pressed={effects}
+            onClick={() => setEffects((value) => !value)}
+          >
+            {effects ? 'Effects on' : 'Effects off'}
+          </button>
           <span className="sample-status">
             <span className="status-dot" />
             {label === 'Sample export'
@@ -889,6 +912,15 @@ export default function App() {
           </span>
         </div>
       </header>
+      <div className="motion-ribbon" aria-hidden="true">
+        <div className="ribbon-track">
+          {[0, 1].map((copy) => (
+            <span key={copy}>
+              SHIP IT / TRACK IT / SEQUENCE IT / REPORT READY /{' '}
+            </span>
+          ))}
+        </div>
+      </div>
       <main className="page">
         <div className="page-heading">
           <div>
@@ -897,6 +929,9 @@ export default function App() {
               Fulfillment & lab operations
             </p>
             <h1>Kit lifecycle</h1>
+            <span className="flash-badge" aria-hidden="true">
+              NEON MODE / FULL SPECTRUM
+            </span>
             <p className="page-description">
               A clear view of every kit. From first shipment to a ready report.
             </p>
@@ -1100,6 +1135,7 @@ export default function App() {
         loading={loading}
       />
       <OrderDrawer order={selected} onClose={() => setSelected(null)} />
-    </>
+    </div>
   );
 }
+

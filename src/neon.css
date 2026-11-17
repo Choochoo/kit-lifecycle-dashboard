@@ -1,0 +1,247 @@
+/* Motion decorates the frame; operational numbers and rows remain stationary. */
+.app-shell {
+  min-height: 100dvh;
+  background:
+    radial-gradient(ellipse at 8% 5%, #8610a0 0, transparent 42%),
+    radial-gradient(ellipse at 95% 40%, #003c81 0, transparent 40%), #160423;
+}
+.app-shell .page-heading h1 {
+  color: #e6ff00;
+  font-size: clamp(32px, 4vw, 58px);
+  text-shadow:
+    3px 3px 0 #ff00d4,
+    -2px -2px 0 #00f5ff;
+}
+.app-shell .page-description,
+.app-shell .snapshot-control label,
+.app-shell .eyebrow,
+.app-shell .page-footer {
+  color: #f5dfff;
+}
+.app-shell .eyebrow {
+  letter-spacing: 2px;
+}
+.app-shell .filters {
+  border: 2px solid #00e5ff;
+  box-shadow: 5px 5px 0 #ff18ae;
+}
+.app-shell .panel {
+  border-color: #00d6f3;
+  box-shadow: 4px 4px 0 #ff18ae;
+}
+.app-shell .metric:nth-child(1) {
+  background: linear-gradient(110deg, #deff00, #89ff4e, #deff00);
+}
+.app-shell .metric:nth-child(2) {
+  background: linear-gradient(110deg, #00e5ff, #5affd2, #00e5ff);
+}
+.app-shell .metric.completed {
+  background: linear-gradient(110deg, #bf8aff, #f39aff, #bf8aff);
+}
+.app-shell .metric.attention {
+  background: linear-gradient(110deg, #ff54c2, #ff9e72, #ff54c2);
+}
+.app-shell .metric {
+  border-color: white;
+  box-shadow: 4px 4px 0 #ff00b8;
+}
+.app-shell .pipeline-bar {
+  background: repeating-linear-gradient(
+    110deg,
+    #7129d8 0 12px,
+    #22d9f2 12px 24px
+  );
+  background-size: 48px 100%;
+}
+.app-shell .pipeline-row.is-completed .pipeline-bar {
+  background: #1b785a;
+}
+.app-shell .pipeline-row.is-attention .pipeline-bar {
+  background: #ac315b;
+}
+.app-shell .data-details {
+  background: white;
+  border: 2px solid #e16fff;
+}
+.motion-toggle {
+  background: #19162b;
+  border: 2px solid #00e5ff;
+  border-radius: 6px;
+  padding: 8px 10px;
+  min-height: 40px;
+  color: white;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+.motion-toggle[aria-pressed='false'] {
+  border-color: #a795b4;
+}
+.motion-ribbon {
+  overflow: hidden;
+  background: #ff18ae;
+  color: #1c0828;
+  border-bottom: 3px solid #00e5ff;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  padding: 7px 0;
+}
+.ribbon-track {
+  display: flex;
+  width: max-content;
+}
+.ribbon-track span {
+  padding-right: 40px;
+}
+.effects-on {
+  animation: atmosphere 12s ease-in-out infinite alternate;
+}
+.effects-on .ribbon-track {
+  animation: ticker 24s linear infinite;
+}
+.effects-on .brand-symbol {
+  animation: neon-glow 2.8s ease-in-out infinite alternate;
+}
+.effects-on .metric {
+  background-size: 250% 100%;
+  animation: chroma-wave 7s ease-in-out infinite alternate;
+}
+.effects-on .metric:nth-child(2) {
+  animation-delay: -2s;
+}
+.effects-on .metric:nth-child(3) {
+  animation-delay: -4s;
+}
+.effects-on .metric:nth-child(4) {
+  animation-delay: -6s;
+}
+.effects-on .panel {
+  animation: panel-glow 4s ease-in-out infinite alternate;
+}
+.effects-on .pipeline-bar {
+  animation: pipeline-flow 3s linear infinite;
+}
+.flash-badge {
+  display: inline-block;
+  margin: 10px 0 3px;
+  padding: 6px 10px;
+  background: #ed00a8;
+  color: white;
+  border: 2px solid #e6ff00;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.effects-on .flash-badge {
+  animation: neon-flash 1.6s step-end infinite;
+}
+.app-shell .metric.attention {
+  overflow: visible;
+}
+.effects-on .metric.attention::before {
+  content: '';
+  position: absolute;
+  pointer-events: none;
+  inset: -5px;
+  border: 3px solid #ff1fca;
+  border-radius: 12px;
+  animation: attention-pulse 1.8s ease-out infinite;
+}
+@keyframes neon-flash {
+  0%,
+  49% {
+    opacity: 1;
+    box-shadow: 0 0 18px #ff00b8;
+  }
+  50%,
+  100% {
+    opacity: 0.12;
+    box-shadow: none;
+  }
+}
+@keyframes attention-pulse {
+  from {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 8px #ff1fca;
+  }
+  to {
+    transform: scale(1.055);
+    opacity: 0;
+    box-shadow: 0 0 28px #ff1fca;
+  }
+}
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+@keyframes atmosphere {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 70px 110px;
+  }
+}
+@keyframes neon-glow {
+  from {
+    box-shadow: 0 0 3px #d8ff36;
+  }
+  to {
+    box-shadow:
+      0 0 14px #d8ff36,
+      0 0 28px #00e5ff;
+  }
+}
+@keyframes chroma-wave {
+  from {
+    background-position: 0 50%;
+  }
+  to {
+    background-position: 100% 50%;
+  }
+}
+@keyframes panel-glow {
+  from {
+    box-shadow:
+      4px 4px 0 #ff18ae,
+      0 0 3px #ff18ae;
+  }
+  to {
+    box-shadow:
+      4px 4px 0 #00e5ff,
+      0 0 17px #9f20d1;
+  }
+}
+@keyframes pipeline-flow {
+  to {
+    background-position: 48px 0;
+  }
+}
+@media (max-width: 680px) {
+  .heading-actions {
+    flex-wrap: wrap;
+  }
+  .header-right {
+    gap: 7px;
+  }
+  .motion-toggle {
+    padding: 6px 7px;
+  }
+  .app-shell .page {
+    padding-top: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .effects-on .metric.attention::before {
+    animation: none !important;
+    content: none;
+  }
+  .effects-on,
+  .effects-on * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
