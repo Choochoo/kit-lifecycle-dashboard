@@ -267,7 +267,7 @@ button.ghost:hover {
   display: flex;
   align-items: center;
   gap: 7px;
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
 }
 .status-dot {
@@ -285,7 +285,7 @@ button.ghost:hover {
   color: #7565b2;
   border: 1px solid #e4def7;
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
 }
 .page {
@@ -307,7 +307,7 @@ button.ghost:hover {
   color: #8b87a3;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 700;
   margin-bottom: 9px;
 }
@@ -323,7 +323,7 @@ button.ghost:hover {
 }
 .snapshot-control label {
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -341,7 +341,7 @@ button.ghost:hover {
   align-items: center;
   gap: 8px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   margin: 0 0 17px;
 }
 .notice svg {
@@ -366,7 +366,7 @@ button.ghost:hover {
 }
 .field > span,
 .field > label {
-  font-size: 10px;
+  font-size: 12px;
   color: #828297;
   font-weight: 600;
 }
@@ -391,7 +391,7 @@ button.ghost:hover {
 .filter-reset {
   height: 36px !important;
   padding: 7px 9px !important;
-  font-size: 11px !important;
+  font-size: 12px !important;
 }
 .metrics {
   display: grid;
@@ -415,7 +415,7 @@ button.ghost:hover {
   margin-bottom: 6px;
 }
 .metric-title {
-  font-size: 11px;
+  font-size: 12px;
   color: #727487;
   font-weight: 500;
 }
@@ -434,7 +434,7 @@ button.ghost:hover {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 10px;
+  font-size: 12px;
   color: #9695a7;
   margin-top: 7px;
 }
@@ -480,11 +480,11 @@ button.ghost:hover {
 }
 .panel-subtitle {
   color: #8e8d9f;
-  font-size: 10px;
+  font-size: 12px;
   margin-top: 3px;
 }
 .label-small {
-  font-size: 10px;
+  font-size: 12px;
   color: var(--muted);
 }
 .tag {
@@ -493,7 +493,7 @@ button.ghost:hover {
   gap: 5px;
   border-radius: 5px;
   padding: 3px 6px;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.4;
   background: #f4f2fa;
   color: #8e86a5;
@@ -509,7 +509,7 @@ button.ghost:hover {
   margin-top: 13px;
 }
 .pipeline-label {
-  font-size: 10px;
+  font-size: 12px;
   color: #747589;
   display: flex;
   align-items: center;
@@ -535,7 +535,7 @@ button.ghost:hover {
 }
 .pipeline-count {
   text-align: right;
-  font-size: 10px;
+  font-size: 12px;
   color: #626178;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
@@ -549,7 +549,7 @@ button.ghost:hover {
   background: #d9ae75;
 }
 .pipeline-footnote {
-  font-size: 9px;
+  font-size: 12px;
   color: #9a97aa;
   padding-top: 17px;
   line-height: 1.6;
@@ -563,7 +563,7 @@ button.ghost:hover {
   gap: 2px;
 }
 .segmented button {
-  font-size: 10px;
+  font-size: 12px;
   font-weight: 500;
   border: 0;
   background: transparent;
@@ -585,10 +585,10 @@ table {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
-  font-size: 11px;
+  font-size: 12px;
 }
 th {
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 500;
   color: #9290a2;
   letter-spacing: 0.15px;
@@ -629,7 +629,7 @@ tbody tr:last-child td {
   color: #b37c3e;
 }
 .duration-table small {
-  font-size: 9px;
+  font-size: 12px;
   color: #a5a0b4;
 }
 .duration-table td:last-child,
@@ -640,7 +640,7 @@ tbody tr:last-child td {
   display: flex;
   align-items: center;
   gap: 6px;
-  font-size: 9px;
+  font-size: 12px;
   color: #a19aaa;
   padding: 12px 21px;
   border-top: 1px solid #f0edf5;
@@ -656,7 +656,7 @@ tbody tr:last-child td {
 .count-badge {
   background: #f0edf9;
   color: #8b7dbb;
-  font-size: 10px;
+  font-size: 12px;
   padding: 1px 6px;
   border-radius: 5px;
   font-weight: 600;
@@ -682,7 +682,7 @@ tbody tr:last-child td {
   align-items: center;
   gap: 7px;
   color: #9290a2;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
 }
 .queue-tabs button.active {
@@ -690,7 +690,7 @@ tbody tr:last-child td {
   border-bottom-color: var(--purple);
 }
 .queue-tabs .count-badge {
-  font-size: 9px;
+  font-size: 12px;
   padding: 0 5px;
 }
 .orders-table {
@@ -711,7 +711,7 @@ tbody tr:last-child td {
   align-items: center;
   gap: 7px;
   color: #5b526e;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 600;
   text-align: left;
 }
@@ -725,15 +725,15 @@ tbody tr:last-child td {
 .order-subtext {
   display: block;
   margin-top: 2px;
-  font-size: 9px;
+  font-size: 12px;
   color: #a29bac;
 }
 .product {
-  font-size: 10px;
+  font-size: 12px;
   color: #656078;
 }
 .country {
-  font-size: 10px;
+  font-size: 12px;
   color: #8d8799;
 }
 .stage-pill {
@@ -743,7 +743,7 @@ tbody tr:last-child td {
   border-radius: 5px;
   background: #f1eef9;
   color: #8b79b7;
-  font-size: 9px;
+  font-size: 12px;
   line-height: 1.5;
   padding: 3px 7px;
   white-space: nowrap;
@@ -767,7 +767,7 @@ tbody tr:last-child td {
   background: #f3f1f6;
 }
 .elapsed {
-  font-size: 10px;
+  font-size: 12px;
   font-variant-numeric: tabular-nums;
   color: #746b80;
 }
@@ -777,7 +777,7 @@ tbody tr:last-child td {
   gap: 3px;
   color: #b48b56;
   background: #fcf7ee;
-  font-size: 9px;
+  font-size: 12px;
   border-radius: 4px;
   padding: 3px 6px;
   white-space: nowrap;
@@ -801,7 +801,7 @@ tbody tr:last-child td {
   justify-content: space-between;
   padding: 13px 21px;
   color: #a29aad;
-  font-size: 10px;
+  font-size: 12px;
 }
 .pagination-buttons {
   display: flex;
@@ -815,7 +815,7 @@ tbody tr:last-child td {
 }
 .data-details {
   margin-top: 17px;
-  font-size: 10px;
+  font-size: 12px;
   color: #9b91a7;
 }
 .data-details summary {
@@ -861,7 +861,7 @@ tbody tr:last-child td {
   align-items: center;
   gap: 20px;
   color: #ada4b5;
-  font-size: 9px;
+  font-size: 12px;
   margin-top: 24px;
 }
 .footer-brand {
@@ -873,7 +873,7 @@ tbody tr:last-child td {
   margin-bottom: 18px;
 }
 .inline-error {
-  font-size: 11px;
+  font-size: 12px;
   color: #a44d42;
 }
 dialog {
@@ -901,7 +901,7 @@ dialog::backdrop {
   letter-spacing: -0.5px;
 }
 .dialog-head p {
-  font-size: 11px;
+  font-size: 12px;
   color: var(--muted);
   margin-top: 6px;
 }
@@ -921,7 +921,7 @@ dialog::backdrop {
   color: #696178;
 }
 .import-form .field small {
-  font-size: 10px;
+  font-size: 12px;
   color: #9890a4;
 }
 .import-note {
@@ -929,7 +929,7 @@ dialog::backdrop {
   background: #f7f5fb;
   border-radius: 7px;
   color: #8e829f;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
 }
 .dialog-actions {
@@ -970,11 +970,11 @@ dialog::backdrop {
 }
 .order-facts dt {
   color: #a296ad;
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 3px;
 }
 .order-facts dd {
-  font-size: 11px;
+  font-size: 12px;
   color: #70617f;
   margin: 0;
 }
@@ -987,7 +987,7 @@ dialog::backdrop {
   border-radius: 7px;
   background: #fffbf4;
   color: #a38351;
-  font-size: 11px;
+  font-size: 12px;
   margin-bottom: 22px;
 }
 .kit-section {
@@ -1041,12 +1041,12 @@ dialog::backdrop {
   z-index: 1;
 }
 .timeline-event {
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 500;
   color: #7a688e;
 }
 .timeline-meta {
-  font-size: 10px;
+  font-size: 12px;
   color: #aaa0b4;
   margin-top: 3px;
 }
@@ -1058,14 +1058,14 @@ dialog::backdrop {
 .missing-note {
   color: #ad8d54;
   background: #fcf8f0;
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.7;
   padding: 9px 11px;
   border-radius: 6px;
   margin-top: 16px;
 }
 .drawer-note {
-  font-size: 10px;
+  font-size: 12px;
   color: #a89caf;
   margin: 20px 0 0;
   line-height: 1.7;
@@ -1148,7 +1148,7 @@ dialog::backdrop {
     margin: 0 4px 0 8px;
   }
   .workspace-name {
-    font-size: 10px;
+    font-size: 12px;
   }
   .header-right {
     gap: 10px;
@@ -1169,7 +1169,7 @@ dialog::backdrop {
     font-size: 28px;
   }
   .page-description {
-    font-size: 11px;
+    font-size: 12px;
   }
   .heading-actions {
     flex-direction: row;
@@ -1180,7 +1180,7 @@ dialog::backdrop {
     gap: 7px;
   }
   .snapshot-control label {
-    font-size: 10px;
+    font-size: 12px;
   }
   .snapshot-control label svg {
     display: none;
@@ -1191,7 +1191,7 @@ dialog::backdrop {
   }
   .heading-actions .primary {
     padding: 9px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .metrics {
     grid-template-columns: 1fr 1fr;
@@ -1206,10 +1206,10 @@ dialog::backdrop {
     font-size: 28px;
   }
   .metric-title {
-    font-size: 10px;
+    font-size: 12px;
   }
   .metric-bottom {
-    font-size: 9px;
+    font-size: 12px;
     align-items: flex-start;
   }
   .filters {
@@ -1236,33 +1236,33 @@ dialog::backdrop {
     font-size: 14px;
   }
   .panel-subtitle {
-    font-size: 9px;
+    font-size: 12px;
   }
   .pipeline {
     display: block;
     padding: 0 16px 17px;
   }
   .pipeline-row {
-    grid-template-columns: 132px 1fr 34px;
+    grid-template-columns: 150px 1fr 34px;
     margin-top: 14px;
     gap: 8px;
   }
   .pipeline-label {
-    font-size: 9px;
+    font-size: 12px;
   }
   .pipeline-count {
-    font-size: 10px;
+    font-size: 12px;
   }
   .pipeline-footnote {
     padding-top: 15px;
   }
   .segmented button {
-    font-size: 9px;
+    font-size: 12px;
     padding: 5px 6px;
   }
   .duration-table th,
   .duration-table td {
-    font-size: 9px;
+    font-size: 12px;
     padding: 11px 10px;
   }
   .duration-table th:first-child,
@@ -1270,14 +1270,14 @@ dialog::backdrop {
     padding-left: 16px;
   }
   .duration-table th {
-    font-size: 8px;
+    font-size: 12px;
   }
   .duration-table td:first-child {
     min-width: 138px;
   }
   .table-footnote {
     padding: 11px 16px;
-    font-size: 8px;
+    font-size: 12px;
     align-items: flex-start;
   }
   .queue-tabs {
@@ -1285,7 +1285,7 @@ dialog::backdrop {
     gap: 20px;
   }
   .queue-tabs button {
-    font-size: 10px;
+    font-size: 12px;
   }
   .orders-table th,
   .orders-table td {
@@ -1300,15 +1300,15 @@ dialog::backdrop {
   }
   .pagination {
     padding: 12px 16px;
-    font-size: 9px;
+    font-size: 12px;
   }
   .data-policy {
     grid-template-columns: 1fr;
     gap: 14px;
-    font-size: 10px;
+    font-size: 12px;
   }
   .page-footer {
-    font-size: 8px;
+    font-size: 12px;
     align-items: flex-start;
     gap: 12px;
   }
@@ -1329,7 +1329,7 @@ dialog::backdrop {
     font-size: 18px;
   }
   .notice {
-    font-size: 10px;
+    font-size: 12px;
     align-items: flex-start;
   }
 }

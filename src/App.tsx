@@ -351,7 +351,7 @@ function Orders({
                         )}
                       </button>
                       <span className="order-subtext mono">
-                        {row.kitId ?? 'No kit shipped'}
+                        {row.kitId ?? 'Shipment pending'}
                       </span>
                     </td>
                     <td>
